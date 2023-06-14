@@ -23,3 +23,37 @@ while escolha !=3:
         print (nome,cpf,rg, funcao)
     else:
         print ('Finalizando..')
+
+(Segunda parte)
+from time import sleep
+from datetime import datetime
+cadastro = dict()
+opcao = 0
+sleep(1)
+print("<====================> MRS <===================>")
+sleep(2)
+print('Bem vindo ao sistema de cadastros!')
+sleep(2)
+print("Suas opções:")
+print( '''[1] Cadastramento
+[2] Consulta
+[3] Alterações
+[4] Sair ou 999''')
+while True:
+    opcao = int(input('Qual sua opção? '))
+    if opcao ==1:
+        cadastro ['nome'] = str(input('Digite o nome: '))
+        cadastro ['rg'] = int(input('Digite o RG: '))
+        cadastro ['cpf'] = int(input('Digite o CPF: '))
+        cadastro ['funcao'] = str(input('Função: '))
+        nasc = int(input('Ano de nascimento: '))
+        cadastro ['idade'] = datetime.now().year - nasc
+        print ('Cadastro relizado com sucesso!')
+    if opcao == 2:
+        print(['cadastro'])
+    if opcao == 3:
+        print('Quais informações deseja alterar!')
+    elif opcao == 4 or 999:
+     break
+print ("Fim do programa.... <<Volte Sempre!>>")
+print("<====================> MRS <===================>")
